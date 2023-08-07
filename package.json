@@ -1,5 +1,5 @@
 {
-  "name": "g_doc",
+  "name": "g_mdb",
   "version": "1.0.0",
   "description": "IOT Db Manage",
   "main": "GDoc.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gadaman-rm/g_doc.git"
+    "url": "git+https://github.com/gadaman-rm/g_mdb.git"
   },
   "keywords": [
     "IOT"
@@ -16,9 +16,9 @@
   "author": "gadaman.rm",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/gadaman-rm/g_doc/issues"
+    "url": "https://github.com/gadaman-rm/g_mdb/issues"
   },
-  "homepage": "https://github.com/gadaman-rm/g_doc#readme",
+  "homepage": "https://github.com/gadaman-rm/g_mdb#readme",
   "dependencies": {
     "mongodb": "^5.7.0"
   }

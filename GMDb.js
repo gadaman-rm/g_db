@@ -1,5 +1,5 @@
 const MongoClient = require("mongodb").MongoClient;
-class GDoc {
+class GMDb {
   constructor(url) {
     this.client = new MongoClient(url);
     this.client.connect();
@@ -43,4 +43,4 @@ class GDoc {
     return count;
   };
 }
-module.exports = GDoc;
+module.exports = GMDb;
