@@ -1,0 +1,25 @@
+{
+  "name": "g_db",
+  "version": "1.0.0",
+  "description": "IOT Db Manage",
+  "main": "GDb.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gadaman-rm/g_db.git"
+  },
+  "keywords": [
+    "IOT"
+  ],
+  "author": "gadaman.rm",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gadaman-rm/g_db/issues"
+  },
+  "homepage": "https://github.com/gadaman-rm/g_db#readme",
+  "dependencies": {
+    "mongodb": "^5.7.0"
+  }
+}
