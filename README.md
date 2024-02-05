@@ -14,38 +14,52 @@ Counting documents
 
 Install the module using npm or yarn:
 
+```bash
 Bash
 npm install gmdb
 Use code with caution. Learn more
+```
 ## Usage
 
 Import the module:
-JavaScript
+```JavaScript
 const GMDb = require('gmdb');
 Use code with caution. Learn more
+```
 Create a new instance:
-JavaScript
+```JavaScript
 const db = new GMDb('your_mongodb_connection_url');
 Use code with caution. Learn more
+```
 Perform operations:
-JavaScript
+```JavaScript
 // Find documents
 const results = await db.find('myDatabase', 'myCollection', { name: 'John' });
-
+```
 // Find a single document
+```JavaScript
 const document = await db.findone('myDatabase', 'myCollection', { age: 30 });
+```
 
 // Update a document
+```JavaScript
 const updateResult = await db.updateOne('myDatabase', 'myCollection', { name: 'John' }, { $set: { age: 35 } });
+```
 
 // Insert a document
+```JavaScript
 const insertResult = await db.insertOne('myDatabase', 'myCollection', { name: 'Alice', age: 25 });
-
+```
 // Find with sorting, skipping, and limiting
+```JavaScript
 const sortedResults = await db.findSortSkipLimit('myDatabase', 'myCollection', {}, { age: 1 }, 5, 10);
+```
 
 // Count documents
+```JavaScript
 const count = await db.countOfData('myDatabase', 'myCollection', {});
+```
+
 Use code with caution. Learn more
 ## Examples
 
