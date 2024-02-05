@@ -16,8 +16,8 @@ Install the module using npm or yarn:
 
 ```bash
 npm install gmdb
-Use code with caution. Learn more
 ```
+Use code with caution. Learn more
 ## Usage
 
 Import the module:
