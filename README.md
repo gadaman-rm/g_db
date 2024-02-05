@@ -15,7 +15,6 @@ Counting documents
 Install the module using npm or yarn:
 
 ```bash
-Bash
 npm install gmdb
 Use code with caution. Learn more
 ```
