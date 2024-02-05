@@ -1,8 +1,8 @@
 {
   "name": "g_mdb",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "IOT Db Manage",
-  "main": "GDoc.js",
+  "main": "GMDb.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
