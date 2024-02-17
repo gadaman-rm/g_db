@@ -42,5 +42,12 @@ class GMDb {
     const count = await collection.count(searchObj);
     return count;
   };
+  createIndex = async function (dbName, collectionName, indexObj) {
+    const db = this.client.db(dbName);
+    const collection = db.collection(collectionName);
+    const createResult =  await collection.createIndex(indexObj);
+    return createResult;
+  }
+
 }
 module.exports = GMDb;
