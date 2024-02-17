@@ -4,10 +4,10 @@ class GMDb {
     this.client = new MongoClient(url);
     this.client.connect();
   }
-  find = async function (dbName, collectionName, searchObj,serachCondition) {
+  find = async function (dbName, collectionName, searchObj, serachCondition) {
     const db = this.client.db(dbName);
     const collection = db.collection(collectionName);
-    const filteredDocs = await collection.find(searchObj,serachCondition).toArray();
+    const filteredDocs = await collection.find(searchObj, serachCondition).toArray();
     return filteredDocs;
   };
   findone = async function (dbName, collectionName, searchObj) {
@@ -42,10 +42,10 @@ class GMDb {
     const count = await collection.count(searchObj);
     return count;
   };
-  createIndex = async function (dbName, collectionName, indexObj) {
+  createIndex = async function (dbName, collectionName, fields, options) {
     const db = this.client.db(dbName);
     const collection = db.collection(collectionName);
-    const createResult =  await collection.createIndex(indexObj);
+    const createResult = await collection.createIndex(fields, options);
     return createResult;
   }
 
