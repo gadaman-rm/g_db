@@ -4,10 +4,14 @@ class GMDb {
     this.client = new MongoClient(url);
     this.client.connect();
   }
-  find = async function (dbName, collectionName, searchObj, serachCondition) {
+  find = async function (dbName, collectionName, searchObj,serachCondition,projection) {
     const db = this.client.db(dbName);
     const collection = db.collection(collectionName);
-    const filteredDocs = await collection.find(searchObj, serachCondition).toArray();
+    let filteredDocs;
+    if(projection)
+      filteredDocs = await collection.find(searchObj,serachCondition).project(projection).toArray();
+    else
+      filteredDocs = await collection.find(searchObj,serachCondition).toArray();
     return filteredDocs;
   };
   findone = async function (dbName, collectionName, searchObj) {
