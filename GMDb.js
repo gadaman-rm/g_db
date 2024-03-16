@@ -1,17 +1,17 @@
-const MongoClient = require("mongodb").MongoClient;
+const { MongoClient, ObjectId } = require("mongodb");
 class GMDb {
   constructor(url) {
     this.client = new MongoClient(url);
     this.client.connect();
   }
-  find = async function (dbName, collectionName, searchObj,serachCondition,projection) {
+  find = async function (dbName, collectionName, searchObj, serachCondition, projection) {
     const db = this.client.db(dbName);
     const collection = db.collection(collectionName);
     let filteredDocs;
-    if(projection)
-      filteredDocs = await collection.find(searchObj,serachCondition).project(projection).toArray();
+    if (projection)
+      filteredDocs = await collection.find(searchObj, serachCondition).project(projection).toArray();
     else
-      filteredDocs = await collection.find(searchObj,serachCondition).toArray();
+      filteredDocs = await collection.find(searchObj, serachCondition).toArray();
     return filteredDocs;
   };
   findone = async function (dbName, collectionName, searchObj) {
@@ -34,6 +34,12 @@ class GMDb {
     const insertResult = await collection.insertOne(inserObj);
     return insertResult;
   };
+  deleteOne = async function (dbName, collectionName, searchObj) {
+    const db = this.client.db(dbName);
+    const collection = db.collection(collectionName);
+    const foundDoc = await collection.deleteOne(searchObj);
+    return foundDoc;
+  };
   findSortSkipLimit = async function (dbName, collectionName, searchObj, sortObj, skipIndex, limitCount) {
     const db = this.client.db(dbName);
     const collection = db.collection(collectionName);
@@ -54,4 +60,4 @@ class GMDb {
   }
 
 }
-module.exports = GMDb;
+module.exports = { GMDb, ObjectId };

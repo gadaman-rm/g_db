@@ -1,6 +1,6 @@
 {
   "name": "g_mdb",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "IOT Db Manage",
   "main": "GMDb.js",
   "scripts": {
